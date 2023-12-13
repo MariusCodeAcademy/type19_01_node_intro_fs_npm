@@ -13,6 +13,6 @@ function minus(n1, n2) {
 
 // expotuosim failo gale
 module.exports = {
-  sum,
+  suma: sum,
   minus,
 };
