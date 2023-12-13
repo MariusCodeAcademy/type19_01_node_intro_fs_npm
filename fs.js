@@ -2,6 +2,7 @@
 // Node integruotas modulis dirbti su file system
 
 const fs = require('fs');
+// import fs from 'fs'
 
 console.log('fs.js file was loaded');
 
@@ -32,3 +33,27 @@ fs.readFile('testas.txt', (error, data) => {
     console.log('atsArr ===', atsArr);
   }
 });
+
+// istrinti del.js faila
+// fs.unlink('del.js', (error) => {
+//   if (error) {
+//     // yra klaidu
+//     console.log('error istrinant faila ===', error);
+//   } else {
+//     console.log('istrinta');
+//   }
+// });
+
+if (fs.existsSync('del.js')) {
+  console.log('del.js egsituoja');
+  fs.unlink('del.js', (error) => {
+    if (error) {
+      // yra klaidu
+      console.log('error istrinant faila ===', error);
+    } else {
+      console.log('istrinta');
+    }
+  });
+} else {
+  console.log('neegzistuoja');
+}
