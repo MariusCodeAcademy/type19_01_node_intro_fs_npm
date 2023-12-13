@@ -1,7 +1,9 @@
 'use strict';
 console.log('intro.js file was loaded');
+const { sum, minus } = require('./modules/helper');
 
 sum(15, 45);
+minus(15, 45);
 
 // parasyti funkcija kuri suskaiciuoja argumentu gauto masyvo vidurki
 // ir iskonsolina rezultata
